@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C47D96D-085D-4318-A468-E59DAA3FC85A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CommunityServiceDBTracker</RootNamespace>
+    <AssemblyName>CommunityServiceDBTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\CommunityServiceIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutForm.Designer.cs">
+      <DependentUpon>aboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AwardsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AwardsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CServiceTrackingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CServiceTrackingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QueryParameter.cs" />
+    <Compile Include="QueryTableAdapter.cs" />
+    <Compile Include="recordsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recordsForm.Designer.cs">
+      <DependentUpon>recordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="awardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="awardsForm.Designer.cs">
+      <DependentUpon>awardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="reportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportsForm.Designer.cs">
+      <DependentUpon>reportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRecordsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceRecordsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsDS.cs">
+      <DependentUpon>StudentsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentsForm.Designer.cs">
+      <DependentUpon>studentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsServiceRecords.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentsServiceRecords.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aboutForm.resx">
+      <DependentUpon>aboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recordsForm.resx">
+      <DependentUpon>recordsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="awardsForm.resx">
+      <DependentUpon>awardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportsForm.resx">
+      <DependentUpon>reportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentsForm.resx">
+      <DependentUpon>studentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AwardsDS.xsc">
+      <DependentUpon>AwardsDS.xsd</DependentUpon>
+    </None>
+    <None Include="AwardsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AwardsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AwardsDS.xss">
+      <DependentUpon>AwardsDS.xsd</DependentUpon>
+    </None>
+    <None Include="CServiceTrackingDataSet.xsc">
+      <DependentUpon>CServiceTrackingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CServiceTrackingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CServiceTrackingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CServiceTrackingDataSet.xss">
+      <DependentUpon>CServiceTrackingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ServiceRecordsDS.xsc">
+      <DependentUpon>ServiceRecordsDS.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceRecordsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceRecordsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiceRecordsDS.xss">
+      <DependentUpon>ServiceRecordsDS.xsd</DependentUpon>
+    </None>
+    <None Include="StudentsDS.xsc">
+      <DependentUpon>StudentsDS.xsd</DependentUpon>
+    </None>
+    <None Include="StudentsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentsDS.xss">
+      <DependentUpon>StudentsDS.xsd</DependentUpon>
+    </None>
+    <None Include="StudentsServiceRecords.xsc">
+      <DependentUpon>StudentsServiceRecords.xsd</DependentUpon>
+    </None>
+    <None Include="StudentsServiceRecords.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentsServiceRecords.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StudentsServiceRecords.xss">
+      <DependentUpon>StudentsServiceRecords.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CServiceTracking.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CServiceTracking_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>CServiceTracking.mdf</DependentUpon>
+    </Content>
+    <Content Include="Reports.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\53141965-new-icon.jpg" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\492-4927615_blue-icon-printer-png-blue-printer-icon-transparent.png" />
+    <None Include="Resources\CommunityServiceIcon.ico" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\communityservice.png" />
+    <None Include="Resources\communityservice2.png" />
+    <None Include="Resources\reports.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\awards.png" />
+    <None Include="Resources\records.png" />
+    <None Include="Resources\students.png" />
+    <None Include="Resources\content-repository-png-computer-icons-document-man-01a4864234744f8f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
